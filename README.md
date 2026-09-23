@@ -1,10 +1,10 @@
-cat > README.md << 'EOF'
 # demo-django: Parte 1
 
 **Disciplina:** BCC481 - Programação Web
+
 **Aluna:** Brenda Gabrielle Alves Nascimento
+
 **Matrícula:** 24.1.4011
-**Universidade:** Universidade Federal de Ouro Preto (UFOP)
 
 Site de uma página em Django 5.1, estilizado com Tailwind CSS (CDN), banco SQLite e executado com Docker Compose.
 
