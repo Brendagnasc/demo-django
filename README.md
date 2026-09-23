@@ -1,13 +1,14 @@
+cat > README.md << 'EOF'
 # demo-django: Parte 1
 
-**Disciplina: ** BCC481 - Programação Web
-**Aluna: ** Brenda Gabrielle Alves Nascimento
+**Disciplina:** BCC481 - Programação Web
+**Aluna:** Brenda Gabrielle Alves Nascimento
 **Matrícula:** 24.1.4011
+**Universidade:** Universidade Federal de Ouro Preto (UFOP)
 
 Site de uma página em Django 5.1, estilizado com Tailwind CSS (CDN), banco SQLite e executado com Docker Compose.
 
 ![Aplicação rodando](docs/screenshot.png)
-
 
 ## Tecnologias
 
@@ -24,13 +25,20 @@ docker compose up --build
 
 Acesse http://localhost:8000 e o painel administrativo em http://localhost:8000/admin/.
 
-Para criar o usuário admin, com o servidor rodando, em outro terminal: 
+Para criar o usuário admin, com o servidor rodando, em outro terminal:
 
 ~~~bash
 docker compose exec web python manage.py createsuperuser
 ~~~
 
-## Partes do trabalho 
+## Estrutura
+
+- `core/`: configurações e rotas principais do projeto
+- `home/`: app com o modelo `Mensagem`, a view `index` e as rotas
+- `templates/home/index.html`: página inicial com Tailwind
+- `docs/`: imagens do README
+
+## Partes do trabalho
 
 Cada parte está em uma branch separada:
 
