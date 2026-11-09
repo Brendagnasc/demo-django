@@ -1,4 +1,4 @@
-# demo-django: Parte 2
+# demo-django: Parte 3
 
 **Disciplina:** BCC481 - Programação Web
 
@@ -10,18 +10,18 @@ Site em Django 5.1, estilizado com Tailwind CSS (CDN), banco SQLite e executado 
 
 ## Página inicial
 
-![Página inicial](docs/screenshot-parte2.png)
+![Página inicial](docs/inicial-parte3.png)
 
-## Página sobre
+## Admin com categorias
 
-![Página sobre](docs/sobre.png)
+![Admin com categorias](docs/admin-categorias.png)
 
 ## O que mudou nesta parte
 
-- Campo `autor` no modelo `Mensagem`, com migration e exibição na página inicial
-- Nova página `/sobre/` (view, rota e template)
-- Link para `/sobre/` no menu
-- Novo gradiente na página inicial
+- Novo model `Categoria`
+- Relacionamento um-para-muitos: cada `Mensagem` pertence a uma `Categoria` (`ForeignKey`)
+- `Categoria` registrada no admin, com coluna e filtro por categoria na lista de mensagens
+- Selo da categoria exibido em cada mensagem da página inicial
 
 ## Tecnologias
 
@@ -47,7 +47,7 @@ docker compose exec web python manage.py createsuperuser
 ## Estrutura
 
 - `core/`: configurações e rotas principais do projeto
-- `home/`: app com o modelo `Mensagem`, as views `index` e `sobre` e as rotas
+- `home/`: app com os models `Categoria` e `Mensagem`, as views `index` e `sobre` e as rotas
 - `templates/home/index.html`: página inicial com Tailwind
 - `templates/home/sobre.html`: página sobre
 - `docs/`: imagens do README
@@ -58,3 +58,4 @@ Cada parte está em uma branch separada:
 
 - `bcc481-django-parte1`: estrutura do projeto, modelo `Mensagem`, admin, view, rotas e template
 - `bcc481-django-parte2`: campo `autor`, página `/sobre/`, link no menu e novo visual
+- `bcc481-django-parte3`: model `Categoria` e relacionamento um-para-muitos com `Mensagem`
